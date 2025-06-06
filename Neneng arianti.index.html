@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ti Piace Perfume</title>
+  <style>
+    body {
+        font-family: 'Playfair Display', serif;
+        margin: 0;
+        background-size: cover;
+        color: #292224;
+    }
+
+    header {
+      background-color: #d4418b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #241e1f;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #3f3535;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #422308;
+    }
+
+    section {
+      display: none;
+      padding: 40px 20px;
+      background-color: rgba(218, 150, 150, 0.95);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      color: #1d1a1c;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #4b3f2f;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product {
+      background-color: transparent;
+      border-radius: 10px;
+      width: 250px;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      color: #555;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: #4b3f2f;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #a1866f;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      padding: 40px;
+      background-color: #f6f1eb;
+      color: #7a6d5f;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+    .footer-column h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #4b3f2f;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #7a6d5f;
+    }
+    .footer-column ul li a:hover {
+      color: #4b3f2f;
+    }
+    .copyright {
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Selamat Datang di Toko Parfum Kami</div>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('product')">Product</a>
+      <a href="#" onclick="showPage('keranjang')">Keranjang</a>
+      <a href="#" onclick="showPage('contact')">Contact Us</a>
+    </nav>
+  </header>
+
+  <section id="home" class="active hero">
+    <h1>Lengkapkan gaya anda dengan koleksi parfum kami.</h1>
+    <p>Ti Piace — a fragrance that speaks your soul. Immerse in timeless sophistication and subtle charm with every drop.</p>
+  </section>
+
+  <section id="product">
+    <h2>Our Products</h2>
+    <div class="container">
+      <div class="product">
+        <img src="img/giordani.jpg" alt="Elysian">
+        <h3>Elysian</h3>
+        <p>Soft floral scent for your timeless moments.</p>
+        <p class="price">Rp450.000</p>
+        <button class="btn">Buy Now</button>
+      <script>('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert("Produk telah ditambahkan ke keranjang!");
+     });
+});</script>
+      </div>
+      <div class="product">
+        <img src="img/parfum 6.jpg" alt="Noir Mystique">
+        <h3>Noir Mystique</h3>
+        <p>Dark and mysterious, perfect for the night.</p>
+        <p class="price">Rp520.000</p>
+        <button class="btn">Buy Now</button><script>('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert("Produk telah ditambahkan ke keranjang!");
+     });
+});</script>
+
+      </div>
+      <div class="product">
+        <img src="img/parfum 2.jpg" alt="Velvet Rose">
+        <h3>Velvet Rose</h3>
+        <p>Romantic rose notes blended with elegance.</p>
+        <p class="price">Rp480.000</p>
+        <button class="btn">Buy Now</button>
+        <script>('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert("Produk telah ditambahkan ke keranjang!");
+     });
+});</script>
+      </div>
+      <div class="product">
+        <img src="img/parfum 3.jpg" alt="Aurora">
+        <h3>Aurora</h3>
+        <p>Fresh, radiant, and dreamy like morning light.</p>
+        <p class="price">Rp495.000</p>
+        <button class="btn">Buy Now</button>
+      <script>('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert("Produk telah ditambahkan ke keranjang!");
+     });
+});</script>
+      </div>
+      <div class="product">
+        <img src="img/parfum 4.jpg" alt="Golden Hour">
+        <h3>Golden Hour</h3>
+        <p>Warm and golden fragrance that soothes your soul.</p>
+        <p class="price">Rp530.000</p>
+        <button class="btn">Buy Now</button>
+        <script>('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert("Produk telah ditambahkan ke keranjang!");
+     });
+});</script>
+      </div>
+      <div class="product">
+        <img src="img/parfum 5.jpg" alt="Celestia">
+        <h3>Celestia</h3>
+        <p>Heavenly blend of white musk and vanilla.</p>
+        <p class="price">Rp1.110.000</p>
+        <button class="btn">Buy Now</button>
+        <script>('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert("Produk telah ditambahkan ke keranjang!");
+     });
+});</script>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have questions, please reach out via the form below:</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-column">
+      <h4>About Ti Piace</h4>
+      <p>Ti Piace Biarkan wewangian kami membangkitkan kenangan indah dan meninggalkan jejak yang tak terlupakan</p>
+    </div>
+    <div class="footer-column">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('product')">Elysian</a></li>
+        <li><a href="#" onclick="showPage('product')">Noir Mystique</a></li>
+        <li><a href="#" onclick="showPage('product')">Velvet Rose</a></li>
+        <li><a href="#" onclick="showPage('product')">Aurora</a></li>
+        <li><a href="#" onclick="showPage('product')">Golden Hour</a></li>
+        <li><a href="#" onclick="showPage('product')">Celestia</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li>Email: nenengarianti1@gmail.com</li>
+        <li>Phone: +62-895-0371-6809</li>
+        <li>Instagram: @nrntii_</li>
+      </ul>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Neneng Arianti . All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+<script>
+  function showPage(pageId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Alert saat klik Buy Now
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+      alert("Produk telah ditambahkan ke keranjang!");
+    });
+  });
+
+  // Validasi Form Contact
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert("Mohon lengkapi semua field!");
+    } else {
+      alert("Terima kasih! Pesan Anda telah dikirim.");
+      this.reset();
+    }
+  });
+</script>
